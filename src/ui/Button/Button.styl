@@ -1,0 +1,21 @@
+@import '../../variables.styl';
+.block
+	text-transform uppercase
+	font-size: 14px
+	background-color: $accentColor;
+	border none
+	color $white
+	padding 10px 16px
+	line-height: 16px
+	border-radius: 2px
+	outline none
+	box-shadow 0 2px 2px 0 $shadowColor, 0 0 2px 0 $shadowColor
+	cursor pointer
+	&.wide
+		display: block
+		width 100%
+	&:hover
+		background-color $accentColorHover
+	&:active
+		background-color $accentColorPress
+

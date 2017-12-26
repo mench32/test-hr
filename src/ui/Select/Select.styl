@@ -1,0 +1,65 @@
+@import '../../variables.styl'
+
+.block
+	display: inline-block
+	position: relative
+	outline none
+	&:focus
+	&:hover
+		.list
+			box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.12);
+	.input
+		font-size: 16px
+		line-height: 24px
+		padding 8px 8px 8px 16px
+		background: $white
+		color $primaryText
+		// outline none
+		border-radius 2px
+		box-sizing: border-box
+		min-width: 340px
+		box-sizing: border-box
+		display: block
+		position: relative
+		user-select none
+		&.open
+			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+		&:after
+			content ''
+			display: inline-block
+			position: absolute
+			right 15px
+			top 18px
+			width: 0
+			height: 0
+			border 5px solid transparent
+			border-top-color #000
+			opacity .37
+			margin-bottom -5px
+			margin-left 8px
+	.list
+		position: absolute
+		top 0
+		left 0
+		min-height 40px
+		width 100%
+		box-sizing: border-box
+		padding 40px 4px 0
+		z-index: -1
+		background: $white
+		border-radius: 2px
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+		.item
+			padding 8px 12px
+			margin 0px 0 0
+			border-radius: 2px
+			line-height: 24px
+			// background: #ccc
+			&:first-child
+				margin-top 8px
+			&:last-child
+				margin-bottom 8px
+
+			&:hover
+				background-color: rgba(0, 0, 0, 0.05);
+
