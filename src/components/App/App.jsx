@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import store from 'store';
 import ProjectsContainer from 'containers/ProjectsContainer';
-import s from './App.styl';
+import './App.styl';
 
 export default class App extends Component {
 	render() {
