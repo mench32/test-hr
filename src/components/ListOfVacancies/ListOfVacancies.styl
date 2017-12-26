@@ -1,6 +1,5 @@
 .block
 	.list
-		// margin-top 20px
 		overflow hidden
 		&.enter
 			height 0px
@@ -12,3 +11,5 @@
 		&.leaveActive
 			transition height .5s
 			height 0px!important
+	&:not(:empty)
+		padding-bottom 4px

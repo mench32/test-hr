@@ -48,7 +48,6 @@ export default class App extends Component {
 	}
 
 	render() {
-
 		const { search, isActive, showPopup } = this.state;
 		const {
 			closeProject,
@@ -57,7 +56,7 @@ export default class App extends Component {
 			closeVacancy,
 			openVacancy,
 			deleteVacancy,
-			addVacancy,
+			addVacancy
 		} = this.props;
 		const projects = filter(this.props.projects, search, isActive);
 

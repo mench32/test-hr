@@ -10,11 +10,9 @@ const toggleVacancyStatus = (state, projectId, vacancyId, status) => {
 	project.vacancies = [ ...project.vacancies ];
 
 	return [ ...state ];
-
-}
+};
 
 export default (state = null, action) => {
-
 	switch (action.type) {
 		case events.PROJECT_OPEN: {
 			const projectIndex = state.findIndex(project => project.id === action.id);
@@ -44,7 +42,7 @@ export default (state = null, action) => {
 				title: action.name,
 				status: 0,
 				vacancies: []
-			})
+			});
 		}
 
 		case events.PROJECT_DELETE: {
@@ -52,20 +50,20 @@ export default (state = null, action) => {
 		}
 
 		case events.VACANCY_CLOSE: {
-			return toggleVacancyStatus(state, action.data.projectId, action.data.vacancyId, 1)
+			return toggleVacancyStatus(state, action.data.projectId, action.data.vacancyId, 1);
 		}
 
 		case events.VACANCY_OPEN: {
-			return toggleVacancyStatus(state, action.data.projectId, action.data.vacancyId, 0)
+			return toggleVacancyStatus(state, action.data.projectId, action.data.vacancyId, 0);
 		}
 
 		case events.VACANCY_DELETE: {
 			const projectIndex = state.findIndex(project => project.id === action.data.projectId);
 			const project = state[projectIndex] = { ...state[projectIndex] };
 
-			project.vacancies = project.vacancies.filter(vacancy => vacancy.id !== action.data.vacancyId)
+			project.vacancies = project.vacancies.filter(vacancy => vacancy.id !== action.data.vacancyId);
 
-			return [ ...state ]
+			return [ ...state ];
 		}
 
 		case events.VACANCY_ADD: {
@@ -76,7 +74,7 @@ export default (state = null, action) => {
 				id: Date.now(),
 				title: action.data.name,
 				status: 0
-			})
+			});
 
 			return [ ...state ];
 		}

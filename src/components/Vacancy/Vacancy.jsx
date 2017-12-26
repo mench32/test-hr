@@ -30,7 +30,7 @@ export default class Vacancy extends Component {
 
 	render() {
 		const { title, status } = this.props;
-		const statusClass = cn(s.status, { [s.done]: !!status })
+		const statusClass = cn(s.status, { [s.done]: !!status });
 		return (
 			<div className={s.block} >
 				<h4>{title}</h4>
@@ -38,7 +38,9 @@ export default class Vacancy extends Component {
 					<div className={statusClass}>{statusTitle[status]}</div>
 					<div className={s.right}>
 						<FlatButton onClick={this.handleChangeStatus} accent={!!status}>{buttonText[status]}</FlatButton>
-						<FlatButton onClick={this.handleDelete}>Удалить</FlatButton>
+						<div className={s.delete}>
+							<FlatButton onClick={this.handleDelete}>Удалить</FlatButton>
+						</div>
 					</div>
 				</div>
 			</div>

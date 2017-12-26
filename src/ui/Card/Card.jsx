@@ -5,7 +5,7 @@ import s from './Card.styl';
 export default class Card extends Component {
 	render() {
 		const { expanded } = this.props;
-		const className = cn(s.block, { [s.expanded]: expanded});
+		const className = cn(s.block, {[s.expanded]: expanded});
 		return (
 			<div {...{ className }}>{this.props.children}</div>
 		);

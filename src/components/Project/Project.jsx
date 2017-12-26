@@ -81,10 +81,7 @@ export default class Project extends Component {
 								}
 							</div>
 							<div className={s.right}>
-								<FlatButton
-									accent={!!status}
-									onClick={this.handleChangeStatus}
-								>
+								<FlatButton accent={!!status} onClick={this.handleChangeStatus}>
 									{buttonText[status]}
 								</FlatButton>
 								<div className={s.delete}>
